@@ -1,0 +1,56 @@
+#
+# franky's bash completion support for core Git alias.
+alias gtad='git-add'
+alias gtapply='git-apply'
+alias gtbr='git-branch'
+alias gtci='git-commit'
+alias gtcf='git-config'
+alias gtco='git-checkout'
+alias gtdiff='git-diff'
+alias gtlog='git-log'
+alias gtmerge='git-merge'
+alias gtmv='git-mv'
+alias gtps='git-push'
+alias gtpl='git-pull'
+alias gtrm='git-rm'
+#alias gtremote='git-remote'
+alias gtreset='git-reset'
+alias gtsbr='git-show-branch'
+alias gtsh='git-show'
+alias gtslog='git-shortlog'
+alias gtstatus='git-status'
+alias gtsubmodule='git-submodule'
+alias gttag='git-tag'
+
+
+# below is done automatically, this file is come from contrib/completion of git source tree
+# . /etc/bash_completion.d/git
+
+complete -o default -o nospace -F _git_am gtam
+complete -o default -o nospace -F _git_apply gtap
+complete -o default -o nospace -F _git_bisect gtbi
+complete -o default -o nospace -F _git_branch gtbr
+complete -o default -o nospace -F _git_bundle gt-bundle
+complete -o default -o nospace -F _git_checkout gtco
+complete -o default -o nospace -F _git_cherry gtcr
+complete -o default -o nospace -F _git_cherry_pick gtcp
+complete -o default -o nospace -F _git_commit gtci
+complete -o default -o nospace -F _git_describe gtdescribe
+complete -o default -o nospace -F _git_diff gtdiff
+complete -o default -o nospace -F _git_fetch gtfetch
+complete -o default -o nospace -F _git_format_patch gtfp
+complete -o default -o nospace -F _git_gc gtgc
+complete -o default -o nospace -F _git_log gtlog
+complete -o default -o nospace -F _git_merge gtmerge
+complete -o default -o nospace -F _git_pull gtpl
+complete -o default -o nospace -F _git_push gtps
+complete -o default -o nospace -F _git_config gtconfig
+#complete -o default -o nospace -F _git_remote gtremote
+complete -o default -o nospace -F _git_reset gtreset
+complete -o default -o nospace -F _git_shortlog gtsl
+complete -o default -o nospace -F _git_show gtshow
+#complete -o default -o nospace -F _git_stash gtstash
+complete -o default -o nospace -F _git_submodule gtsubmodule
+complete -o default -o nospace -F _git_log gtsbr
+complete -o default -o nospace -F _git_tag gttag
+

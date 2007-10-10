@@ -1,0 +1,9 @@
+hardstatus alwayslastline
+hardstatus string '%{gk}[ %{G}%H %{g}][%= %{wk}%?%-Lw%?%{=b kR}(%{W}%n*%f %t%?(%u)%?%{=b kR})%{= kw}%?%+Lw%?%?%= %{g}][%{Y}%l%{g}]%{=b C}[ %m/%d %c ]%{W}'
+termcap  Eterm 'AF=\E[3%dm:AB=\E[4%dm'
+terminfo Eterm 'AF=\E[3%p1%dm:AB=\E[4%p1%dm'
+termcapinfo Eterm ti@:te@
+termcap  xterm 'AF=\E[3%dm:AB=\E[4%dm'
+terminfo xterm 'AF=\E[3%p1%dm:AB=\E[4%p1%dm'
+termcapinfo xterm ti@:te@
+shell /bin/bash
