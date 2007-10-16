@@ -3,5 +3,6 @@
 	email = yinping@kooxoo.com
 [merge]
     summary = true
+    tool = vimdiff
 [diff]
     renames = copy
