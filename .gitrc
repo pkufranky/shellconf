@@ -6,9 +6,9 @@ alias gtbr='git-branch'
 alias gtci='git-commit'
 alias gtcf='git-config'
 alias gtco='git-checkout'
-alias gtdiff='git-diff'
+alias gtdi='git-diff'
 alias gtlog='git-log'
-alias gtmerge='git-merge'
+alias gtmg='git-merge'
 alias gtmv='git-mv'
 alias gtps='git-push'
 alias gtpl='git-pull'
@@ -18,8 +18,8 @@ alias gtreset='git-reset'
 alias gtsbr='git-show-branch'
 alias gtsh='git-show'
 alias gtslog='git-shortlog'
-alias gtstatus='git-status'
-alias gtsubmodule='git-submodule'
+alias gtst='git-status'
+alias gtsm='git-submodule'
 alias gttag='git-tag'
 
 
@@ -41,7 +41,7 @@ complete -o default -o nospace -F _git_fetch gtfetch
 complete -o default -o nospace -F _git_format_patch gtfp
 complete -o default -o nospace -F _git_gc gtgc
 complete -o default -o nospace -F _git_log gtlog
-complete -o default -o nospace -F _git_merge gtmerge
+complete -o default -o nospace -F _git_merge gtmg
 complete -o default -o nospace -F _git_pull gtpl
 complete -o default -o nospace -F _git_push gtps
 complete -o default -o nospace -F _git_config gtconfig
@@ -50,7 +50,7 @@ complete -o default -o nospace -F _git_reset gtreset
 complete -o default -o nospace -F _git_shortlog gtsl
 complete -o default -o nospace -F _git_show gtshow
 #complete -o default -o nospace -F _git_stash gtstash
-complete -o default -o nospace -F _git_submodule gtsubmodule
+complete -o default -o nospace -F _git_submodule gtsm
 complete -o default -o nospace -F _git_log gtsbr
 complete -o default -o nospace -F _git_tag gttag
 
