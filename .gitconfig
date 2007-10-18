@@ -6,3 +6,9 @@
     tool = vimdiff
 [diff]
     renames = copy
+[i18n]
+    logoutputencoding = GBK
+[color]
+    diff = auto
+    status = auto
+    branch = auto
