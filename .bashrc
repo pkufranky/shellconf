@@ -75,7 +75,7 @@ if [ -f ~/.gitrc ]; then
 fi
 
 export CVSROOT=":pserver:yinping@cvs.kooxoo.com:/home/cvsroot"
-alias grep='grep -n'
+#alias grep='grep -n'
 ulimit -c unlimited
 
 for x in 172 178 179 201 205 235 236 237 238 239
@@ -91,7 +91,7 @@ done
 
 set -o vi
 complete -r scp ssh perl gdb
-export LC_CTYPE=zh_CN.UTF-8
+export LANG=en_US.UTF-8
+export LC_CTYPE=zh_CN.GBK
 export CSCOPE_DB=~/.cscope/cscope.out
 export EDITOR=vim
-#export LD_LIBRARY_PATH=/usr/local/lib
