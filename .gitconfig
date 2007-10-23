@@ -10,5 +10,5 @@
     logoutputencoding = GBK
 [color]
     diff = auto
-    status = auto
+    status = true
     branch = auto
