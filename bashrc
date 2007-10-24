@@ -70,22 +70,21 @@ alias l='ls -CF'
 if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
-if [ -f ~/.gitrc ]; then
-    . ~/.gitrc
+if [ -f ~/.rc/gitrc ]; then
+    . ~/.rc/gitrc
 fi
 
 export CVSROOT=":pserver:yinping@cvs.kooxoo.com:/home/cvsroot"
-#alias grep='grep -n'
 ulimit -c unlimited
 
-for x in 172 178 179 201 205 235 236 237 238 239
+for x in 168 169 170 171 172 173 174 175 176 177 178 179 180 201 205 235 236 237 238 239 249
 do
     if [[ $x -le 205 ]]; then
         w=194
     else
         w=205
     fi
-    export kooxoo$x=60.28.$w.$x
+    export kx$x=60.28.$w.$x
     alias ssh$x="ssh 60.28.$w.$x"
 done
 
