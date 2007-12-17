@@ -88,9 +88,10 @@ do
     alias ssh$x="ssh 60.28.$w.$x"
 done
 
-set -o vi
 complete -r scp ssh perl gdb
 export LANG=en_US.UTF-8
-export LC_CTYPE=zh_CN.GBK
+export LC_CTYPE=zh_CN.UTF-8
+
 export CSCOPE_DB=~/.cscope/cscope.out
 export EDITOR=vim
+export PATH=~/bin:$PATH
