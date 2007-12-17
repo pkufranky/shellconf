@@ -1,27 +1,38 @@
 #
 # franky's bash completion support for core Git alias.
+#
 alias gtad='git-add'
-alias gtapply='git-apply'
+alias gtap='git-apply'
+alias gtbi='git-bisect'
 alias gtbr='git-branch'
 alias gtci='git-commit'
 alias gtcf='git-config'
 alias gtcl='git-clone'
 alias gtco='git-checkout'
+alias gtcp='git-cherry-pick'
+alias gtcr='git-cherry'
+alias gtde='git-describe'
 alias gtdi='git-diff'
+alias gtfe='git-fetch'
+alias gtfp='git-format-patch'
+alias gtgc='git-gc'
 alias gtlg='git-log'
 alias gtmg='git-merge'
 alias gtmv='git-mv'
 alias gtps='git-push'
 alias gtpl='git-pull'
+alias gtrb='git-rebase'
+alias gtrl='git-reflog'
 alias gtrm='git-rm'
-#alias gtremote='git-remote'
-alias gtreset='git-reset'
+alias gtrs='git-reset'
+alias gtrmt='git-remote'
 alias gtsbr='git-show-branch'
 alias gtsh='git-show'
 alias gtslg='git-shortlog'
-alias gtst='git-status'
 alias gtsm='git-submodule'
-alias gttag='git-tag'
+alias gtss='git-stash'
+alias gtst='git-status'
+alias gttg='git-tag'
 
 
 # below is done automatically, this file is come from contrib/completion of git source tree
@@ -31,27 +42,27 @@ complete -o default -o nospace -F _git_am gtam
 complete -o default -o nospace -F _git_apply gtap
 complete -o default -o nospace -F _git_bisect gtbi
 complete -o default -o nospace -F _git_branch gtbr
-complete -o default -o nospace -F _git_bundle gt-bundle
+complete -o default -o nospace -F _git_bundle gtbd
 complete -o default -o nospace -F _git_checkout gtco
 complete -o default -o nospace -F _git_cherry gtcr
 complete -o default -o nospace -F _git_cherry_pick gtcp
 complete -o default -o nospace -F _git_commit gtci
-complete -o default -o nospace -F _git_describe gtdescribe
-complete -o default -o nospace -F _git_diff gtdiff
-complete -o default -o nospace -F _git_fetch gtfetch
+complete -o default -o nospace -F _git_describe gtde
+complete -o default -o nospace -F _git_diff gtdi
+complete -o default -o nospace -F _git_fetch gtfe
 complete -o default -o nospace -F _git_format_patch gtfp
 complete -o default -o nospace -F _git_gc gtgc
 complete -o default -o nospace -F _git_log gtlg
 complete -o default -o nospace -F _git_merge gtmg
 complete -o default -o nospace -F _git_pull gtpl
 complete -o default -o nospace -F _git_push gtps
-complete -o default -o nospace -F _git_config gtconfig
-#complete -o default -o nospace -F _git_remote gtremote
-complete -o default -o nospace -F _git_reset gtreset
-complete -o default -o nospace -F _git_shortlog gtsl
-complete -o default -o nospace -F _git_show gtshow
-#complete -o default -o nospace -F _git_stash gtstash
+complete -o default -o nospace -F _git_config gtcf
+complete -o default -o nospace -F _git_remote gtrmt
+complete -o default -o nospace -F _git_reset gtrs
+complete -o default -o nospace -F _git_shortlog gtslg
+complete -o default -o nospace -F _git_show gtsh
+complete -o default -o nospace -F _git_stash gsss
 complete -o default -o nospace -F _git_submodule gtsm
 complete -o default -o nospace -F _git_log gtsbr
-complete -o default -o nospace -F _git_tag gttag
+complete -o default -o nospace -F _git_tag gttg
 
