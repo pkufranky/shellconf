@@ -7,8 +7,10 @@
 [diff]
     renames = copy
 [i18n]
-    logoutputencoding = GBK
+    logoutputencoding = UTF-8
 [color]
     diff = auto
     status = true
     branch = auto
+[status]
+	submodulesummary = -1
