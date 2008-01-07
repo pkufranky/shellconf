@@ -77,19 +77,15 @@ fi
 export CVSROOT=":pserver:yinping@cvs.kooxoo.com:/home/cvsroot"
 ulimit -c unlimited
 
-for x in 168 169 170 171 172 173 174 175 176 177 178 179 180 201 205 235 236 237 238 239 249
+for x in 168 169 170 171 172 173 174 175 176 177 178 179 180 201 205 211 235 236 237 238 239 249
 do
-    if [[ $x -le 205 ]]; then
-        w=194
-    else
-        w=205
-    fi
-    export kx$x=60.28.$w.$x
-    alias ssh$x="ssh 60.28.$w.$x"
+    export kx$x=192.168.0.$x
+    alias ssh$x="ssh 192.168.0.$x"
 done
 
 complete -r scp ssh perl gdb
 export LANG=en_US.UTF-8
+export -n LC_ALL=
 export LC_CTYPE=zh_CN.UTF-8
 
 export CSCOPE_DB=~/.cscope/cscope.out
