@@ -14,3 +14,5 @@
     branch = auto
 [status]
 	submodulesummary = -1
+[format]
+	numbered = auto
