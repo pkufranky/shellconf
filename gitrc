@@ -40,6 +40,7 @@ alias gtsm='git-submodule'
 alias gtss='git-stash'
 alias gtst='git-status'
 alias gttg='git-tag'
+alias gtnw='git-new-workdir'
 
 
 # below is done automatically, this file is come from contrib/completion of git source tree
