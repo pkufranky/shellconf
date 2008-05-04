@@ -13,10 +13,17 @@ alias gtcp='git-cherry-pick'
 alias gtcr='git-cherry'
 alias gtde='git-describe'
 alias gtdi='git-diff'
+alias gtdis='git-diff --stat'
 alias gtfe='git-fetch'
 alias gtfp='git-format-patch'
 alias gtgc='git-gc'
 alias gtlg='git-log'
+alias gtlg1='git-log --pretty=oneline'
+alias gtlgp='git-log -p'
+alias gtlgs='git-log --stat'
+alias gtlgfp='git-log --first-parent'
+alias gtlglr='git-log --pretty=oneline --left-right'
+
 alias gtmg='git-merge'
 alias gtmv='git-mv'
 alias gtps='git-push'
@@ -53,6 +60,8 @@ complete -o default -o nospace -F _git_fetch gtfe
 complete -o default -o nospace -F _git_format_patch gtfp
 complete -o default -o nospace -F _git_gc gtgc
 complete -o default -o nospace -F _git_log gtlg
+complete -o default -o nospace -F _git_log gtlg1
+complete -o default -o nospace -F _git_log gtlgp
 complete -o default -o nospace -F _git_merge gtmg
 complete -o default -o nospace -F _git_pull gtpl
 complete -o default -o nospace -F _git_push gtps
