@@ -86,7 +86,7 @@ done
 complete -r scp ssh perl gdb
 export LANG=en_US.UTF-8
 export -n LC_ALL=
-export LC_CTYPE=zh_CN.UTF-8
+export LC_CTYPE=en_US.UTF-8
 
 export CSCOPE_DB=~/.cscope/cscope.out
 export EDITOR=vim
