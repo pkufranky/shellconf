@@ -6,6 +6,7 @@
     tool = vimdiff
 [diff]
     renames = copy
+	nonwordchars = "()<>,{/\"+"
 [i18n]
     logoutputencoding = UTF-8
 [color]
