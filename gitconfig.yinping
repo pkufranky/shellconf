@@ -18,3 +18,7 @@
 	submodulesummary = -1
 [format]
 	numbered = auto
+
+[alias]
+	sed = !git ls-files --stage | grep ^100 | awk '{print $4}' | xargs sed $@
+	slg = shortlog --pretty='format:%h %s'
