@@ -1,0 +1,24 @@
+[user]
+	name = "Ping Yin"
+	email = ping@adsnexus.com
+[merge]
+    summary = true
+    tool = vimdiff
+[diff]
+    renames = copy
+[i18n]
+    logoutputencoding = UTF-8
+[color]
+    diff = auto
+    status = true
+    branch = auto
+	interactive = auto;
+	ui = auto;
+[status]
+	submodulesummary = -1
+[format]
+	numbered = auto
+
+[alias]
+	sed = !git ls-files --stage | grep ^100 | awk '{print $4}' | xargs sed $@
+	slg = shortlog --pretty='format:%h %s'
