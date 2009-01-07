@@ -75,16 +75,6 @@ if [ -f ~/.rc/gitrc ]; then
     . ~/.rc/gitrc
 fi
 
-export CVSROOT=":pserver:yinping@cvs.kooxoo.com:/home/cvsroot"
-ulimit -c unlimited
-
-for x in 168 169 170 171 172 173 174 175 176 177 178 179 180 201 205 211 235 236 237 238 239 249
-do
-    export kx$x=192.168.0.$x
-    alias ssh$x="ssh 192.168.0.$x"
-done
-
-complete -r scp ssh perl gdb
 export LANG=en_US.UTF-8
 export -n LC_ALL=
 export LC_CTYPE=en_US.UTF-8
