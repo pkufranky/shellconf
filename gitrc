@@ -76,4 +76,3 @@ complete -o default -o nospace -F _git_submodule gtsm
 complete -o default -o nospace -F _git_log gtsbr
 complete -o default -o nospace -F _git_tag gttg
 
-. ~/.rc/stgit-completion.bash
