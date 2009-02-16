@@ -1,0 +1,6 @@
+# Rename this file to bashrc.local to be included by bashrc
+
+# use ssh agent
+USE_AGENT=1
+
+# vim: ft=sh

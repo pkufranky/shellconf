@@ -74,6 +74,9 @@ fi
 if [ -f ~/.rc/gitrc ]; then
     . ~/.rc/gitrc
 fi
+if [ -f ~/.rc/bashrc.local ]; then
+	. ~/.rc/bashrc.local
+fi
 
 export LANG=en_US.UTF-8
 export -n LC_ALL=
@@ -83,7 +86,7 @@ export CSCOPE_DB=~/.cscope/cscope.out
 export EDITOR=vim
 export PATH=~/bin:$PATH
 
-
+# ssh agent {{{
 SSH_ENV="$HOME/.ssh/environment"
 function start_agent {
   echo "Initialising new SSH agent..."
@@ -94,14 +97,20 @@ function start_agent {
   /usr/bin/ssh-add;
 }
 
-# Source SSH settings, if applicable
+if test "$USE_AGENT" = "1"
+then
+	# Source SSH settings, if applicable
 
-if [ -f "${SSH_ENV}" ]; then
-  . "${SSH_ENV}" > /dev/null
-  #ps ${SSH_AGENT_PID} doesn’t work under cywgin
-  ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
-  start_agent;
-}
-else
-  start_agent;
+	if [ -f "${SSH_ENV}" ]; then
+	  . "${SSH_ENV}" > /dev/null
+	  #ps ${SSH_AGENT_PID} doesn’t work under cywgin
+	  ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
+	  start_agent;
+	}
+	else
+	  start_agent;
+	fi
 fi
+# }}}
+
+# vim: fdm=marker
