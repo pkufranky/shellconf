@@ -1,8 +1,7 @@
 #!/bin/bash
-who=$(whoami)
 cd
-for n in bashrc bash_profile inputrc screenrc lftp vimplaterc.${who} gitrc gitconfig.${who}
+for n in bashrc bash_profile inputrc screenrc lftp gitconfig
 do
-	ln -sfv -T .rc/$n .$(basename $n .$who)
+	ln -sfv -T .rc/$n .$n
 done
 cd - >&/dev/null
