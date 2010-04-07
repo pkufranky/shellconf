@@ -8,6 +8,7 @@
     tool = vimdiff
 [diff]
     renames = copy
+	wordregex = "[[:alnum:]_]+|[^[:space:]]"
 [i18n]
     logoutputencoding = UTF-8
 [color]
@@ -22,5 +23,5 @@
 	numbered = auto
 
 [alias]
-	sed = !git ls-files --stage | grep ^100 | awk '{print $4}' | xargs sed $@
+	sed = !git ls-files --stage | grep ^100 | awk '{print $4}' | xargs -t sed
 	slg = shortlog --pretty='format:%h %s'
