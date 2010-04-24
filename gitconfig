@@ -21,6 +21,8 @@
 	submodulesummary = -1
 [format]
 	numbered = auto
+[push]
+	default = tracking
 
 [sendemail]
 	smtpencryption = tls
