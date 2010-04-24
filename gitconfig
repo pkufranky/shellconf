@@ -4,17 +4,17 @@
 	name = "Ping Yin"
 	email = ping@adsnexus.com
 [merge]
-    summary = true
-    tool = vimdiff
+	summary = true
+	tool = vimdiff
 [diff]
-    renames = copy
+	renames = copy
 	wordregex = "[[:alnum:]_]+|[^[:space:]]"
 [i18n]
-    logoutputencoding = UTF-8
+	logoutputencoding = UTF-8
 [color]
-    diff = auto
-    status = true
-    branch = auto
+	diff = auto
+	status = true
+	branch = auto
 	interactive = auto;
 	ui = auto;
 [status]
