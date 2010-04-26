@@ -17,6 +17,9 @@
 	branch = auto
 	interactive = auto;
 	ui = auto;
+[showbranch]
+    default = --topo-order
+    default = heads/*
 [status]
 	submodulesummary = -1
 [format]
