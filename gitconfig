@@ -3,7 +3,7 @@
 	excludesfile=~/.gitignore
 [user]
 	name = "Ping Yin"
-	email = pkufranky@gmail.com
+	email = ping@eee168.com
 [merge]
 	summary = true
 	tool = vimdiff
