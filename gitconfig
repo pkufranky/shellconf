@@ -1,5 +1,6 @@
 [core]
 	autocrlf = false
+	excludesfile=~/.gitignore
 [user]
 	name = "Ping Yin"
 	email = ping@adsnexus.com
@@ -26,6 +27,8 @@
 	numbered = auto
 [push]
 	default = tracking
+[mailmap]
+	file = ~/.mailmap
 
 [sendemail]
 	smtpencryption = tls
