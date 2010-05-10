@@ -11,7 +11,7 @@
 	renames = copy
 	wordregex = "[[:alnum:]_]+|[^[:space:]]"
 [i18n]
-	logoutputencoding = UTF-8
+	logoutputencoding = GBK
 [color]
 	diff = auto
 	status = true
