@@ -39,3 +39,4 @@
 [alias]
 	sed = !git ls-files --stage | grep ^100 | awk '{print $4}' | xargs -t sed
 	slg = shortlog --pretty='format:%h %s'
+	locate = !sh -c 'git ls-files | grep --color=auto "$1"' -
