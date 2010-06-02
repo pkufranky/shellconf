@@ -41,5 +41,5 @@
 	slg = shortlog --pretty='format:%h %s'
 	locate = !sh -c 'git ls-files | grep --color=auto "$1"' -
 
-[url "git@bear:android/"]
+[url "bearr:android/"]
 	insteadOf = "git://android.git.kernel.org/"
