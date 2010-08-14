@@ -1,0 +1,46 @@
+# put the following line in ~/.bashrc
+# . ~/.rc/bashrc.common
+
+if [ -f ~/.rc/gitrc ]; then
+    . ~/.rc/gitrc
+fi
+if [ -f ~/.rc/bashrc.local ]; then
+	. ~/.rc/bashrc.local
+fi
+
+export LANG=en_US.UTF-8
+export -n LC_ALL=
+export LC_CTYPE=en_US.UTF-8
+
+export CSCOPE_DB=~/.cscope/cscope.out
+export EDITOR=vim
+export PATH=~/bin:$PATH
+
+# ssh agent {{{
+SSH_ENV="$HOME/.ssh/environment"
+function start_agent {
+  echo "Initialising new SSH agent..."
+  /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
+  echo succeeded
+  chmod 600 "${SSH_ENV}"
+  . "${SSH_ENV}" > /dev/null
+  /usr/bin/ssh-add;
+}
+
+if test "$USE_AGENT" = "1"
+then
+	# Source SSH settings, if applicable
+
+	if [ -f "${SSH_ENV}" ]; then
+	  . "${SSH_ENV}" > /dev/null
+	  #ps ${SSH_AGENT_PID} doesn’t work under cywgin
+	  ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
+	  start_agent;
+	}
+	else
+	  start_agent;
+	fi
+fi
+# }}}
+
+# vim: fdm=marker
