@@ -30,11 +30,11 @@
 [mailmap]
 	file = ~/.mailmap
 
-[sendemail]
-	smtpencryption = tls
-	smtpserver = smtp.gmail.com
-	smtpuser = pkufranky@gmail.com
-	smtpserverport = 587
+#[sendemail]
+#	smtpencryption = tls
+#	smtpserver = smtp.gmail.com
+#	smtpuser = pkufranky@gmail.com
+#	smtpserverport = 587
 
 [alias]
 	sed = !git ls-files --stage | grep ^100 | awk '{print $4}' | xargs -t sed
