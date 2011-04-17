@@ -8,6 +8,8 @@ if [ -f ~/.rc/bashrc.local ]; then
 	. ~/.rc/bashrc.local
 fi
 
+. ~/.rc/bash_completion_tmux.sh
+
 export LANG=en_US.UTF-8
 export -n LC_ALL=
 export LC_CTYPE=en_US.UTF-8
