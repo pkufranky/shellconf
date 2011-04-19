@@ -18,6 +18,12 @@ export CSCOPE_DB=~/.cscope/cscope.out
 export EDITOR=vim
 export PATH=~/bin:$PATH
 
+# when reattatching to tmux, we can't access the ssh agent, following is the solution
+# run this before 'tmux attatch'
+alias savessh='bash ~/.rc/agent.sh save'
+# run this in tmux window
+alias fixssh='source ~/.rc/agent.sh restore'
+
 # ssh agent {{{
 SSH_ENV="$HOME/.ssh/environment"
 function start_agent {
