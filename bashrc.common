@@ -20,9 +20,13 @@ export PATH=~/bin:$PATH
 
 # when reattatching to tmux, we can't access the ssh agent, following is the solution
 # run this before 'tmux attatch'
-alias savessh='bash ~/.rc/agent.sh save'
+#alias savessh='bash ~/.rc/agent.sh save'
 # run this in tmux window
-alias fixssh='source ~/.rc/agent.sh restore'
+#alias fixssh='source ~/.rc/agent.sh restore'
+
+function fixssh() {
+	eval `tmux show-environment | grep -v '^-' | sed -r 's/^(.+)=(.+)$/export \1="\2"/g'`
+}
 
 # ssh agent {{{
 SSH_ENV="$HOME/.ssh/environment"
