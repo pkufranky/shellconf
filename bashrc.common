@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # put the following line in ~/.bashrc
 # . ~/.rc/bashrc.common
 
@@ -17,6 +19,8 @@ export LC_CTYPE=en_US.UTF-8
 export CSCOPE_DB=~/.cscope/cscope.out
 export EDITOR=vim
 export PATH=~/bin:$PATH
+
+PROMPT_COMMAND="history -a"
 
 # when reattatching to tmux, we can't access the ssh agent, following is the solution
 # run this before 'tmux attatch'
