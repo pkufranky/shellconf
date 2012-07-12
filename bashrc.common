@@ -33,6 +33,8 @@ function fixssh() {
 	eval `tmux show-environment | grep -v '^-' | sed -r 's/^(.+)=(.+)$/export \1="\2"/g'`
 }
 
+cmdfu(){ curl "http://www.commandlinefu.com/commands/matching/$@/$(echo -n $@ | openssl base64)/plaintext"; }
+
 # ssh agent {{{
 SSH_ENV="$HOME/.ssh/environment"
 function start_agent {
