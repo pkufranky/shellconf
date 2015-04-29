@@ -32,6 +32,7 @@ alias gtmt='git mergetool'
 alias gtmv='git mv'
 alias gtps='git push'
 alias gtpl='git pull'
+alias gtplr='git pull --rebase'
 alias gtrb='git rebase'
 alias gtrbw='git rebase --whitespace=fix'
 alias gtrl='git reflog'
@@ -50,34 +51,37 @@ alias gtnw='git new-workdir'
 
 # below is done automatically, this file is come from contrib/completion of git source tree
 # . /etc/bash_completion.d/git
+. ~/.rc/git-completion.bash
 
-complete -o default -o nospace -F _git_am gtam
-complete -o default -o nospace -F _git_apply gtap
-complete -o default -o nospace -F _git_bisect gtbi
-complete -o default -o nospace -F _git_branch gtbr
-complete -o default -o nospace -F _git_bundle gtbd
-complete -o default -o nospace -F _git_checkout gtco
-complete -o default -o nospace -F _git_cherry gtcr
-complete -o default -o nospace -F _git_cherry_pick gtcp
-complete -o default -o nospace -F _git_commit gtci
-complete -o default -o nospace -F _git_describe gtde
-complete -o default -o nospace -F _git_diff gtdi
-complete -o default -o nospace -F _git_fetch gtfe
-complete -o default -o nospace -F _git_format_patch gtfp
-complete -o default -o nospace -F _git_gc gtgc
-complete -o default -o nospace -F _git_log gtlg
-complete -o default -o nospace -F _git_log gtlg1
-complete -o default -o nospace -F _git_log gtlgp
-complete -o default -o nospace -F _git_merge gtmg
-complete -o default -o nospace -F _git_pull gtpl
-complete -o default -o nospace -F _git_push gtps
-complete -o default -o nospace -F _git_config gtcf
-complete -o default -o nospace -F _git_remote gtrmt
-complete -o default -o nospace -F _git_reset gtrs
-complete -o default -o nospace -F _git_shortlog gtslg
-complete -o default -o nospace -F _git_show gtsh
-complete -o default -o nospace -F _git_stash gsss
-complete -o default -o nospace -F _git_submodule gtsm
-complete -o default -o nospace -F _git_log gtsbr
-complete -o default -o nospace -F _git_tag gttg
+__git_complete gtlg _git_log
+__git_complete gtam _git_am
+__git_complete gtap _git_apply
+__git_complete gtbi _git_bisect
+__git_complete gtbr _git_branch
+__git_complete gtbd _git_bundle
+__git_complete gtco _git_checkout
+__git_complete gtcr _git_cherry
+__git_complete gtcp _git_cherry_pick
+__git_complete gtci _git_commit
+__git_complete gtde _git_describe
+__git_complete gtdi _git_diff
+__git_complete gtfe _git_fetch
+__git_complete gtfp _git_format_patch
+__git_complete gtgc _git_gc
+__git_complete gtlg _git_log
+__git_complete gtlg1 _git_log
+__git_complete gtlgp _git_log
+__git_complete gtmg _git_merge
+__git_complete gtpl _git_pull
+__git_complete gtplr _git_pull
+__git_complete gtps _git_push
+__git_complete gtcf _git_config
+__git_complete gtrmt _git_remote
+__git_complete gtrs _git_reset
+__git_complete gtslg _git_shortlog
+__git_complete gtsh _git_show
+__git_complete gtsh gtss _git_stash
+__git_complete gtsm _git_submodule
+__git_complete gtsbr _git_show_branch
+__git_complete gttg _git_tag
 

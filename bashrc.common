@@ -35,6 +35,11 @@ function fixssh() {
 
 cmdfu(){ curl "http://www.commandlinefu.com/commands/matching/$@/$(echo -n $@ | openssl base64)/plaintext"; }
 
+# set tmux panel title
+ptitle() {
+    printf '\033]2;%s\033\\' "$@"
+}
+
 # ssh agent {{{
 SSH_ENV="$HOME/.ssh/environment"
 function start_agent {

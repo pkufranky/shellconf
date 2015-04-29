@@ -1,3 +1,6 @@
 *.pyc
 .*.sw*
+*.log*
+gen-py
+
 
