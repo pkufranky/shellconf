@@ -18,3 +18,4 @@ restore|r)
 esac
 
 
+foo1
