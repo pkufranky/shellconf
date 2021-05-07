@@ -10,6 +10,7 @@ case "$1" in
 save|s)
 	echo "export SSH_AUTH_SOCK=$SSH_AUTH_SOCK" > $auth_sock_file
 	;;
+zoo
 restore|r)
 	. $auth_sock_file
 	;;
